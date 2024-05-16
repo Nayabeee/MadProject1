@@ -27,7 +27,7 @@
             android:fontFamily="@font/poetsenone_regular"
             android:textStyle="bold"
             android:layout_marginTop="55dp"
-            android:text="Exam Edge"
+            android:text="Quiz Wiz"
             android:textSize="30dp"
             android:textAlignment="center"
             android:textColor="@color/text"
