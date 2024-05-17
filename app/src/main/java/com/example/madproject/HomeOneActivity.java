@@ -28,11 +28,11 @@ public class HomeOneActivity extends AppCompatActivity {
         });
 
         Button SignUp=findViewById(R.id.signup);
-        Signup.setOnClickListener(new View.OnClickListener(){
+        SignUp.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent=new Intent (getApplicationContext(),SignUp.class);
                         startActivity(intent);
             }
-        }
+        });
     }
 }
