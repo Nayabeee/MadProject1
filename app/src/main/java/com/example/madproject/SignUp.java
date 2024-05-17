@@ -1,10 +1,12 @@
 package com.example.madproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SignUp extends AppCompatActivity {
     private EditText firstNameEditText, lastNameEditText, usernameEditText, emailEditText, passwordEditText, confirmPasswordEditText;
     private CheckBox termsCheckbox;
+    private TextView member;
     private Button signupButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,12 @@ public class SignUp extends AppCompatActivity {
         confirmPasswordEditText = findViewById(R.id.confirmPassword);
         termsCheckbox = findViewById(R.id.termsCheckbox);
         signupButton = findViewById(R.id.signupButton);
+        member = findViewById(R.id.alreadyMemberText);
 
+        member.setOnClickListener(v ->{
+            Intent intent = new Intent(SignUp.this, SignIn.class);
+            startActivity(intent);
+        });
         signupButton.setOnClickListener(v -> {
             String firstName = firstNameEditText.getText().toString().trim();
             String lastName = lastNameEditText.getText().toString().trim();
@@ -52,6 +60,11 @@ public class SignUp extends AppCompatActivity {
 
             // Add your signup logic here (e.g., save data, navigate to another activity)
             Toast.makeText(SignUp.this, "Sign Up Successful", Toast.LENGTH_SHORT).show();
+          //  Intent intent = new Intent(SignUp.this, HomeActivityTwo.class);
+           // startActivity(intent);
+           // finish();
         });
+
     }
+
 }
