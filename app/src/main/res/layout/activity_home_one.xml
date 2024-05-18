@@ -11,6 +11,7 @@
         android:orientation="horizontal"
         android:padding="20dp">
 
+
         <ImageView
             android:id="@+id/logo"
             android:layout_width="300dp"
@@ -35,6 +36,19 @@
 
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/shadow_into_light"
+        android:textStyle="bold"
+        android:layout_marginTop="215dp"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome to Quiz Wiz, where knowledge meets fun! Dive into a world of quizzes designed to challenge your intellect, entertain, and expand your horizons. From trivia buffs to curious minds, we have something for everyone. Get ready to test your wits, compete with your fellows, and embark on a journey of discovery. Let's quiz!"
+        android:textSize="17dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        />
 
 
     <Button

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@drawable/bg_one">
+    android:background="@drawable/bg_onee">
 
 
     <ImageView
@@ -29,19 +29,18 @@
         android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_width="300dp"
+            android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:id="@+id/createAccountText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginBottom="16dp"
             android:text="Create Your Account"
             android:fontFamily="@font/playfairdisplay"
@@ -52,17 +51,17 @@
             android:id="@+id/firstName"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:hint="First Name"
+            android:hint="Full Name"
             android:inputType="textPersonName"
             android:layout_marginBottom="8dp" />
 
-        <EditText
-            android:id="@+id/lastName"
-            android:layout_width="270dp"
-            android:layout_height="wrap_content"
-            android:hint="Last Name"
-            android:inputType="textPersonName"
-            android:layout_marginBottom="8dp" />
+<!--        <EditText-->
+<!--            android:id="@+id/lastName"-->
+<!--            android:layout_width="270dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Last Name"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:layout_marginBottom="8dp" />-->
 
         <EditText
             android:id="@+id/username"
@@ -95,34 +94,64 @@
             android:hint="Confirm Password"
             android:inputType="textPassword"
             android:layout_marginBottom="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Are You a:"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:fontFamily="@font/playfairdisplay"
+            />
+
+        <RadioGroup
+            android:id="@+id/studentTeacherRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="5dp">
+
+            <RadioButton
+                android:id="@+id/studentRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/teacherRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teacher" />
+        </RadioGroup>
 
         <CheckBox
             android:id="@+id/termsCheckbox"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:text="I accept the terms of use and privacy policy"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="5dp"/>
 
         <Button
             android:id="@+id/signupButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="90dp"
             android:text="Sign Up"
             android:backgroundTint="@color/dark"/>
+        <TextView
+            android:id="@+id/alreadyMemberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65dp"
+            android:text="Already a Member?"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/alreadyMemberText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Already a Member?"
-        android:textSize="16sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
 
 </RelativeLayout>
