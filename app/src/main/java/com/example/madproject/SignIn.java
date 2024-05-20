@@ -59,8 +59,12 @@ public class SignIn extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Toast.makeText(SignIn.this, "Forgot Password Clicked", Toast.LENGTH_SHORT).show();
-
+                    // Create an Intent to start ForgotPasswordActivity
+                    Intent intent = new Intent(SignIn.this, ForgotPasswordActivity.class);
+                    // Start the new activity
+                    startActivity(intent);
                 }
+
             });
         }
 
